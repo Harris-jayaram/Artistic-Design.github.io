@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Sign Up Page</title>
+  
+  </head>
+  <body>
+    <video autoplay loop muted plays-inline class="video">
+        <source src="./pexels-artem-podrez-6586286.mp4">
+    </video>
+    <style>
+        /* Add your CSS styles here */
+        .container {
+          width: 25%;
+          margin: 0 auto;
+          text-align: center;
+          padding: 50px;
+          border: 1px solid gray;
+          border-radius: 10px;
+          box-shadow: 5px 5px 10px lightgray;
+        }
+        input[type="text"], input[type="email"],input[type="name"], input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          border: 1px solid gray;
+        }
+        button[type="submit"] {
+          padding: 10px 20px;
+          border-radius: 5px;
+          background-color: lightblue;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        button[type="submit"]:hover {
+          background-color: blue;
+        }            
+        .video{
+           width: 100%;
+          height: auto;
+          top: 0;
+          right: 0;
+          z-index: -1;
+           position: fixed;
+}
+
+      </style>
+    <div class="container">
+      
+      <h1>Sign Up</h1>
+      <form>
+        <input type="text" placeholder="Username" id="username">
+        <input type="name" placeholder="Firstname"required>
+        <input type="name" placeholder="Lastname"required>
+        <input type="email" placeholder="Email"required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <script>
+      // Add your JavaScript code here
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function(event) {
+        const username = document.getElementById("username").value;
+        
+        if (!username) {
+          event.preventDefault();
+          alert("Please enter a username.");
+        } else {
+          alert("Sign up successful!");
+        }
+      });
+    </script>
+  </body>
+</html>
